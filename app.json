@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/advice/advice",
+    "pages/login/login",
+    "pages/me/me",
+    "pages/curriculum/curriculum",
+    "pages/function/function",
+    "pages/schoolbus/schoolbus",
+    "pages/calendar/calendar",
+    "pages/library/library",
+    "pages/librarylogin/librarylogin",
+    "pages/lessoninfo/lessoninfo",
+    "pages/liblecture/liblecture"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "果壳儿",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-tabbar": "vant-weapp/tabbar",
+    "van-tabbar-item": "vant-weapp/tabbar-item",
+    "van-cell": "vant-weapp/cell",
+    "van-cell-group": "vant-weapp/cell-group",
+    "van-field": "vant-weapp/field",
+    "van-row": "vant-weapp/row",
+    "van-col": "vant-weapp/col"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "iconPath": "/images/icon_home.png",
+        "selectedIconPath": "images/icon_home_active.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "iconPath": "/images/icon_notebook.png",
+        "selectedIconPath": "images/icon_notebook_active.png",
+        "pagePath": "pages/curriculum/curriculum",
+        "text": "课表"
+      },
+      {
+        "iconPath": "/images/icon_tag.png",
+        "selectedIconPath": "images/icon_tag_active.png",
+        "pagePath": "pages/function/function",
+        "text": "百宝箱"
+      },
+      {
+        "iconPath": "/images/icon_me.png",
+        "selectedIconPath": "images/icon_me_active.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "groupIdList":[
+   "805769614"
+  ]
+}

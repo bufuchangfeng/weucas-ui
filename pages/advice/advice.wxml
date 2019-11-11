@@ -1,0 +1,7 @@
+<!--pages/advice/advice.wxml-->
+<view class="cu-form-group margin-top" style="padding-bottom: 50rpx;">
+		<textarea maxlength="-1" bindinput="adviceInput" placeholder="请输入您对小程序的宝贵建议！" value="{{advice}}"></textarea>
+	</view>
+  <view style="text-align: center; padding-top: 20px;">
+    <van-button type="primary" size="normal" style="height: 30rpx;" bind:click="submitAdvice">提交建议</van-button>
+  </view>

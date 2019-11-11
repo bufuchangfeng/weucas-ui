@@ -1,0 +1,6 @@
+<!--pages/schoolbus/schoolbus.wxml-->
+
+<view class='imagesize' bindtap="preview">
+  <image src="http://www.neumark.top:8080/schoolbus.jpg" class='in-image'>
+  </image>
+</view>

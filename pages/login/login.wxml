@@ -1,0 +1,27 @@
+<!--pages/login/login.wxml-->
+<view style="padding-top:240rpx;">
+  <view>
+    <van-cell-group style="padding-top: 20rpx;">
+    <van-field
+      value = "{{ mail }}"
+      label = "邮箱"
+      left-icon = "contact"
+      placeholder="请输入您的sep邮箱"
+      border
+      bind:change = "mailinput"
+    />
+     <van-field
+    value="{{ password }}"
+    type="password"
+    left-icon = "gem-o"
+    label="密码"
+    placeholder="请输入密码"
+    border="{{ false }}"
+    bind:change = "passwordinput"
+  />
+    </van-cell-group>
+    <view style="display: flex; flex-direction: row; justify-content:center;">
+      <van-button type="info" plain style="padding-top: 20rpx; padding-bottom: 20rpx; height: 30rpx;" bindtap="login">绑定邮箱</van-button>
+    </view>
+  </view>
+</view>

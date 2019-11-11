@@ -1,0 +1,22 @@
+<!--pages/function/function.wxml-->
+
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top">
+     <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="openLecture">开启人文讲座邮件服务</button>
+      <view class="padding"></view>
+     <button class="cu-btn bg-red lg" style="width: 90%;" bindtap="closeLecture">关闭人文讲座邮件服务</button>
+  </view>
+</view>
+
+
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top">
+  <button class="cu-btn bg-blue lg" style="width: 90%;" bind:click="navigateToSchoolBus" bindtap="navigateToSchoolBus">校车时间表</button>
+  <view class="padding"></view>
+  <button class="cu-btn bg-gradual-blue lg" style="width: 90%;" bind:click="navigateToCalendar" bindtap="navigateToCalendar">校历</button>
+  <!-- <view class="padding"></view>
+  <button class="cu-btn bg-gradual-purple lg" style="width: 90%;" >校园地图</button> -->
+  <view class="padding"></view>
+  <button class="cu-btn bg-gradual-orange lg" style="width: 90%;" bindtap="navigateToLibrary" bind:click="navigateToLibrary">图书馆</button>
+  </view>
+</view>

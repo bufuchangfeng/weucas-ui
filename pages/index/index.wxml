@@ -1,0 +1,17 @@
+<!--index.wxml-->
+
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
+
+<view>
+    <view class="padding text-center">
+        <view class="padding-xl radius shadow-warp bg-white margin-top">
+            <view>果壳儿是一款国科大校园生活小程序。</view>
+            <view>欢迎使用和提建议！</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/me/me.wxml-->
+
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top">
+     <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToAdvice">提建议</button>
+     <view class="padding"></view>
+      <button class="cu-btn bg-blue lg" style="width: 90%;" open-type="openGroupProfile" group-id="805769614">加入果壳儿交流群</button>
+  </view>
+</view>
+
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top">
+     <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToLogin">登录</button>
+     <view class="padding"></view>
+     <button class="cu-btn bg-red lg" style="width: 90%;" bindtap="quit">退出登录</button>
+  </view>
+</view>
