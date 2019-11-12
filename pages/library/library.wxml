@@ -7,11 +7,11 @@
   </view>
 </view>
 
-<view class="padding text-center">
+<!-- <view class="padding text-center">
   <view class="padding-xl radius shadow-warp bg-white margin-top">
      <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToLecture">素质教育签到</button>
   </view>
-</view>
+</view> -->
 
   <view class="padding text-center">
 <view class="cu-capsule round">
