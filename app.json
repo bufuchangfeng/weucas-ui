@@ -11,7 +11,8 @@
     "pages/library/library",
     "pages/librarylogin/librarylogin",
     "pages/lessoninfo/lessoninfo",
-    "pages/liblecture/liblecture"
+    "pages/liblecture/liblecture",
+    "pages/score/score"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -61,7 +62,7 @@
       }
     ]
   },
-  "groupIdList":[
-   "805769614"
+  "groupIdList": [
+    "805769614"
   ]
 }

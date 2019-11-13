@@ -1,0 +1,26 @@
+<!--pages/score/score.wxml-->
+
+<view class="padding">
+  <view class="padding-xl radius shadow-warp bg-white margin-top">
+        <view>{{scores.stu_info.stu_name}}</view>
+        <view>{{scores.stu_info.stu_no}}</view>
+        <view>{{scores.stu_info.stu_major}}</view>
+        <view>{{scores.stu_info.stu_department}}</view>
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="scroll">
+  <view wx:for="{{scores.score}}" wx:key>
+  <view class="padding">
+  <view class="padding-xl radius shadow-warp bg-white margin-top">
+        <view>课程名称：{{item.course_name}}</view>
+        <view>课程英文名称：{{item.course_name_en}}</view>
+        <view>课程学分：{{item.course_credit}}</view>
+        <view>课程状态：{{item.course_status}}</view>
+        <view>课程学期：{{item.course_term}}</view>
+        <view>课程分数：{{item.course_score}}</view>
+        <view>是否为学位课：{{item.course_xuewei}}</view>
+  </view>
+</view>
+  </view>
+</scroll-view>

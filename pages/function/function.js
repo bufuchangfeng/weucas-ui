@@ -147,4 +147,9 @@ Page({
       url: '/pages/library/library'
     })
   },
+  navigateToScore:function(){
+    wx.navigateTo({
+      url: '/pages/score/score'
+    })
+  }
 })

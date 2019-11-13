@@ -18,5 +18,7 @@
   <button class="cu-btn bg-gradual-purple lg" style="width: 90%;" >校园地图</button> -->
   <view class="padding"></view>
   <button class="cu-btn bg-gradual-orange lg" style="width: 90%;" bindtap="navigateToLibrary" bind:click="navigateToLibrary">图书馆</button>
+  <view class="padding"></view>
+  <button class="cu-btn bg-gradual-purple lg" style="width: 90%;" bindtap="navigateToScore" bind:click="navigateToScore">查成绩</button>
   </view>
 </view>
