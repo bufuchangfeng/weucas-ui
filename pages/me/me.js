@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      loginStatus:false,
+      emailStatus:true,
   },
 
   
@@ -133,6 +134,16 @@ Page({
           }
      })
     }
-  }
+  },
+    login(){
+      this.setData({
+          loginStatus:!this.data.loginStatus
+      })
+    },
+    emailsSwitch(){
+      this.setData({
+          emailStatus:!this.data.emailStatus
+      })
+    }
   
 })

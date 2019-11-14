@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -19,11 +19,14 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"nodeModules": true
+		"nodeModules": true,
+		"remoteDebugLogEnable": false,
+		"sourcemapDisabled": true,
+		"useAlphaLib": true,
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.0",
-	"appid": "wx5b6d37536e9bbb25",
 	"projectname": "ucas",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -33,6 +36,11 @@
 	"simulatorPluginLibVersion": {},
 	"qqappid": "1110006992",
 	"qqLibVersion": "1.8.0",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -43,12 +51,37 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "课表",
+					"pathName": "pages/curriculum/curriculum",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "function",
+					"pathName": "pages/function/function",
+					"query": "",
+					"scene": ""
+				}
+			]
 		}
 	}
 }

@@ -1,1 +1,45 @@
 /* pages/function/function.wxss */
+
+.function_list{
+    width: 100%;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.function_list .functions_item{
+    width: 90%;
+    padding: 20rpx;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 20rpx 5%;
+    -webkit-border-radius: 20rpx;
+    -moz-border-radius: 20rpx;
+    border-radius: 20rpx;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+
+
+
+}
+.functions_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.functions_text{
+    width: 100%;
+
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35rpx;
+}
+.functions_item image{
+    width: 170rpx;
+    background: #fff;
+    height: 170rpx;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 80%;
+    border-radius: 80%;
+}

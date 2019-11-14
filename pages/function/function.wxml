@@ -1,24 +1,42 @@
 <!--pages/function/function.wxml-->
-
-<view class="padding text-center">
-  <view class="padding-xl radius shadow-warp bg-white margin-top">
-     <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="openLecture">开启人文讲座邮件服务</button>
-      <view class="padding"></view>
-     <button class="cu-btn bg-red lg" style="width: 90%;" bindtap="closeLecture">关闭人文讲座邮件服务</button>
-  </view>
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+        <text class="cuIcon-title text-orange "></text> 常用功能
+    </view>
+    <view class="action">
+        ··期待更多
+    </view>
 </view>
 
-
-<view class="padding text-center">
-  <view class="padding-xl radius shadow-warp bg-white margin-top">
-  <button class="cu-btn bg-blue lg" style="width: 90%;" bind:click="navigateToSchoolBus" bindtap="navigateToSchoolBus">校车时间表</button>
-  <view class="padding"></view>
-  <button class="cu-btn bg-gradual-blue lg" style="width: 90%;" bind:click="navigateToCalendar" bindtap="navigateToCalendar">校历</button>
-  <!-- <view class="padding"></view>
-  <button class="cu-btn bg-gradual-purple lg" style="width: 90%;" >校园地图</button> -->
-  <view class="padding"></view>
-  <button class="cu-btn bg-gradual-orange lg" style="width: 90%;" bindtap="navigateToLibrary" bind:click="navigateToLibrary">图书馆</button>
-  <view class="padding"></view>
-  <button class="cu-btn bg-gradual-purple lg" style="width: 90%;" bindtap="navigateToScore" bind:click="navigateToScore">查成绩</button>
-  </view>
+<view class="function_list">
+    <block wx:for="{{functions}}">
+        <view class="shadow shadow-blur functions_item {{item.color}}" data-type = "{{item.type}}" bindtap="Router" >
+            <image mode="widthFix" src="{{item.url}}"></image>
+            <view class="functions_text">{{item.name}}</view>
+        </view>
+    </block>
 </view>
+<!--这里卡片背景可以用学校的每个-->
+
+<!--<view class="padding text-center">-->
+  <!--<view class="padding-xl radius shadow-warp bg-white margin-top">-->
+     <!--<button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="openLecture">开启人文讲座邮件服务</button>-->
+      <!--<view class="padding"></view>-->
+     <!--<button class="cu-btn bg-red lg" style="width: 90%;" bindtap="closeLecture">关闭人文讲座邮件服务</button>-->
+  <!--</view>-->
+<!--</view>-->
+
+
+<!--<view class="padding text-center">-->
+  <!--<view class="padding-xl radius shadow-warp bg-white margin-top">-->
+  <!--<button class="cu-btn bg-blue lg" style="width: 90%;" bind:click="navigateToSchoolBus" bindtap="navigateToSchoolBus">校车时间表</button>-->
+  <!--<view class="padding"></view>-->
+  <!--<button class="cu-btn bg-gradual-blue lg" style="width: 90%;" bind:click="navigateToCalendar" bindtap="navigateToCalendar">校历</button>-->
+  <!--&lt;!&ndash; <view class="padding"></view>-->
+  <!--<button class="cu-btn bg-gradual-purple lg" style="width: 90%;" >校园地图</button> &ndash;&gt;-->
+  <!--<view class="padding"></view>-->
+  <!--<button class="cu-btn bg-gradual-orange lg" style="width: 90%;" bindtap="navigateToLibrary" bind:click="navigateToLibrary">图书馆</button>-->
+  <!--<view class="padding"></view>-->
+  <!--<button class="cu-btn bg-gradual-purple lg" style="width: 90%;" bindtap="navigateToScore" bind:click="navigateToScore">查成绩</button>-->
+  <!--</view>-->
+<!--</view>-->

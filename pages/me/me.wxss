@@ -1,1 +1,109 @@
 /* pages/me/me.wxss */
+
+page{
+    background: #00c594;
+    
+}
+
+.user_box{
+
+    width: 100%;
+    margin: 0;
+    padding: 40rpx 0;
+    padding-bottom: 0;
+}
+.user_head image{
+    width: 150rpx;
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+    height: 150rpx;
+    -webkit-border-radius: 70%;
+    -moz-border-radius: 70%;
+    border-radius: 70%;
+
+
+}
+.user_head{
+    padding-bottom: 40rpx;
+}
+.user_op_box:first-child{
+    margin-top: 15rpx;
+}
+.user_op_box:last-child{
+    margin-bottom: 15rpx;
+    margin-top: 10rpx;
+}
+
+.user_nick{
+    -webkit-animation: fadeIn 500ms ;
+    -o-animation: fadeIn 500ms ;
+    -webkit-transition: 500ms ;
+    -moz-transition: 500ms ;
+    -ms-transition: 500ms ;
+    -o-transition: 500ms ;
+    transition: 500ms ;
+    animation: fadeIn 500ms ;
+    width: 90%;
+    margin: 10rpx 5%;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.user_nick text{
+    width: 100%;
+    text-align: center;
+}
+.cu-list{
+
+    -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.08) ;
+    -moz-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.08) ;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,0.08);
+}
+.join_us::after{
+    border: none;
+}
+
+.join_us{
+    width: auto;
+}
+.user_op_box{
+    z-index: 999;
+
+    width: 90%;
+    background: #fff;
+    padding: 10rpx;
+
+    -webkit-border-radius: 10rpx;
+    -moz-border-radius: 10rpx;
+    border-radius: 10rpx;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 5%;
+    -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
+    -moz-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1);
+}
+
+.footer{
+    position: fixed;
+    bottom: 20rpx;
+    width: 100%;
+    text-align: center;
+    opacity: .8;
+
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

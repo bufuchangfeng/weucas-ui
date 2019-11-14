@@ -1,10 +1,14 @@
 <!--pages/curriculum/curriculum.wxml-->
 
-<view class="padding text-center" style="display: flex;">
-    <view style="width:50%; font-size:40rpx;">第{{current_week}}周</view>
+<view class="padding text-center" style="display: flex;justify-content: space-between">
+    <view style="width:50%; font-size:40rpx;text-align: left;">第{{current_week}}周</view>
      
-    <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="toLastWeek">上一周</button>
-    <button class="cu-btn bg-red lg" style="width: 90%;" bindtap="toNextWeek">下一周</button>
+   <view class="operate_box">
+
+     <view class=" pre_box "  style="width: 90%;" bindtap="toLastWeek"><image mode="widthFix" src="../../images/pre.png"></image><text>上一周</text></view>
+     <view class=" next_box "  style="width: 90%;" bindtap="toNextWeek"><text>下一周</text><image mode="widthFix" src="../../images/next.png"></image></view>
+
+   </view>
 </view>
 
 <view class="top">

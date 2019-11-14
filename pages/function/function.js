@@ -10,7 +10,44 @@ Page({
    */
 
   data: {
-
+    functions:[
+        {
+            color:"bg-red",
+            name:"校车时间表",
+            type:"schoolbus",
+            url:"../../images/icon_home_active.png"
+        },
+        {
+            name:"校历",
+            color:"bg-blue",
+            type:"calendar",
+            url:"../../images/icon_home_active.png"
+        },
+        {
+            name:"图书馆",
+            color:"bg-orange",
+            type:"library",
+            url:"../../images/icon_home_active.png"
+        },
+        {
+            name:"成绩查询",
+            color:"bg-green",
+            type:"score",
+            url:"../../images/icon_home_active.png"
+        },
+        {
+            name:"··更多",
+            type:99,
+            color:"bg-gray",
+            url:"../../images/icon_home_active.png"
+        },
+        {
+            name:"··更多",
+            type:99,
+            color:"bg-gray",
+            url:"../../images/icon_home_active.png"
+        }
+    ]
   },
 
   openLecture:function(){
@@ -131,25 +168,44 @@ Page({
   onShareAppMessage: function () {
 
   },
+  //
+  // navigateToSchoolBus: function(){
+  //   wx.navigateTo({
+  //     url: '/pages/schoolbus/schoolbus'
+  //   })
+  // },
+  // navigateToCalendar: function(){
+  //   wx.navigateTo({
+  //     url: '/pages/calendar/calendar'
+  //   })
+  // },
+  // navigateToLibrary: function(){
+  //   wx.navigateTo({
+  //     url: '/pages/library/library'
+  //   })
+  // },
+  // navigateToScore:function(){
+  //   wx.navigateTo({
+  //     url: '/pages/score/score'
+  //   })
+  // },
 
-  navigateToSchoolBus: function(){
-    wx.navigateTo({
-      url: '/pages/schoolbus/schoolbus'
-    })
-  },
-  navigateToCalendar: function(){
-    wx.navigateTo({
-      url: '/pages/calendar/calendar'
-    })
-  },
-  navigateToLibrary: function(){
-    wx.navigateTo({
-      url: '/pages/library/library'
-    })
-  },
-  navigateToScore:function(){
-    wx.navigateTo({
-      url: '/pages/score/score'
-    })
-  }
+    /**
+     * 跳转
+     * @param e
+     * @constructor
+     */
+    Router(e){
+      console.log(e.currentTarget.dataset.type);
+      let type = e.currentTarget.dataset.type;
+      if(type === 99){
+          wx.showToast({
+              title:"敬请期待！"
+          });
+          return
+      }
+      wx.navigateTo({
+          url:`/pages/${type}/${type}`
+      })
+    }
 })

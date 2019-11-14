@@ -49,3 +49,25 @@
   display: flex;
   align-items: center;
 }
+.operate_box{
+  display: flex;
+  background: #fff;
+  padding: 10rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  border-radius: 10rpx;
+
+}
+.pre_box,.next_box{
+  display: flex;
+  justify-content: right;
+  align-content: right;
+  align-items: center;
+}
+.pre_box{
+  margin-right: 30rpx;
+}
+.pre_box image,.next_box image{
+  width: 50rpx;
+  height: 50rpx;
+}

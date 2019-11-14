@@ -1,17 +1,66 @@
 <!--pages/me/me.wxml-->
 
-<view class="padding text-center">
-  <view class="padding-xl radius shadow-warp bg-white margin-top">
-     <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToAdvice">提建议</button>
-     <view class="padding"></view>
-      <button class="cu-btn bg-blue lg" style="width: 90%;" open-type="openGroupProfile" group-id="805769614">加入果壳儿交流群</button>
+<view class="user_box">
+    <!--头像-->
+    <view class="user_head"><image mode="widthFix" src="../../images/fake_user.png"></image></view>
+    <!--用户名-->
+  <view class="user_op_box">
+      <view class="user_nick"><text>{{loginStatus ? "您已登录":"hello，你还未登录！"}}</text><switch checked="{{loginStatus}}" bindchange="login"></switch></view>
+      <view hidden="{{!loginStatus}}" class="user_nick"><text>{{emailStatus ? "已开启人文邮件服务":"已关闭人文邮件服务"}}</text><switch checked="{{emailStatus}}" bindchange="emailsSwitch"></switch></view>
   </view>
+
 </view>
 
-<view class="padding text-center">
-  <view class="padding-xl radius shadow-warp bg-white margin-top">
-     <button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToLogin">登录</button>
-     <view class="padding"></view>
-     <button class="cu-btn bg-red lg" style="width: 90%;" bindtap="quit">退出登录</button>
-  </view>
+
+
+
+<!--<view class="padding text-center">-->
+    <!--<view class="padding-xl radius shadow-warp bg-white margin-top">-->
+        <!--<button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToLogin">登录</button>-->
+        <!--<view class="padding"></view>-->
+        <!--<button class="cu-btn bg-red lg" style="width: 90%;" bindtap="quit">退出登录</button>-->
+    <!--</view>-->
+<!--</view>-->
+
+<!--我的页面功能-->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+        <button class="cu-btn content" >
+            <text class="cuIcon-writefill text-cyan"></text>
+            <text class="text-grey">功能1</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class="cu-btn content" >
+            <text class="cuIcon-writefill text-cyan"></text>
+            <text class="text-grey">功能2</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class="cu-btn content" >
+            <text class="cuIcon-writefill text-cyan"></text>
+            <text class="text-grey">功能2</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class="cu-btn content" bindtap="navigateToAdvice">
+            <text class="cuIcon-writefill text-cyan"></text>
+            <text class="text-grey">意见反馈</text>
+        </button>
+    </view>
+    <view class="cu-item">
+            <button class="join_us" style="width: 90%;" open-type="openGroupProfile" group-id="805769614">加入果壳儿交流群</button>
+    </view>
 </view>
+<!--<view class="padding text-center">-->
+  <!--<view class="padding-xl radius shadow-warp bg-white margin-top">-->
+     <!--<button class="cu-btn bg-blue lg" style="width: 90%;" bindtap="navigateToAdvice">提建议</button>-->
+     <!--<view class="padding"></view>-->
+      <!--<button class="cu-btn bg-blue lg" style="width: 90%;" open-type="openGroupProfile" group-id="805769614">加入果壳儿交流群</button>-->
+  <!--</view>-->
+<!--</view>-->
+
+
+<!---->
+<view class="footer"><text>果壳小组2019@v1.0.0</text></view>
+
