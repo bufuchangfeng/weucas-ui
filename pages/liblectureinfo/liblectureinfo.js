@@ -1,27 +1,27 @@
-// pages/score/score.js
-var util = require("../../utils/util.js")
-
+// pages/liblectureinfo/liblectureinfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    scores:{}
+    liblecture: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getScores()
+    this.setData({
+      liblecture: JSON.parse(options.liblecture)
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
@@ -64,37 +64,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-
-  getScores:function(){
-
-    var openid = wx.getStorageSync("openid")
-    if(openid == ""){
-       wx.showToast({
-        title: '请先登录！',
-        icon: "none",
-        duration: 2000
-      }) 
-      return
-    }
-
-     var that = this
-     wx.request({
-          data: util.json2Form({
-            openid: openid,
-          }),
-          header: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
-          url: 'https://www.neumark.top/user/get_scores',
-          method: "POST",
-          success: (res) => {
-            // console.log(res.data)
-            that.setData({
-              scores: res.data
-            })
-      }
-    })
   }
 })

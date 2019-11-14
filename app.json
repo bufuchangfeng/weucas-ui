@@ -12,7 +12,8 @@
     "pages/librarylogin/librarylogin",
     "pages/lessoninfo/lessoninfo",
     "pages/liblecture/liblecture",
-    "pages/score/score"
+    "pages/score/score",
+    "pages/liblectureinfo/liblectureinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -64,5 +65,10 @@
   },
   "groupIdList": [
     "805769614"
-  ]
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "果壳儿获取您的位置信息来提供优质服务"
+    }
+  }
 }
