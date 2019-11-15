@@ -3,8 +3,8 @@
           <view>讲座名称： {{liblecture.name}}</view>
           <view>讲座地点： {{liblecture.place}}</view>
           <view>主讲人:  {{liblecture.who}}</view>
-          <view>开始时间： {{ liblecture.start_time }}</view>
-          <view>结束时间： {{ liblecture.end_time }}</view>
+          <view>开始时间： {{ liblecture.startTime }}</view>
+          <view>结束时间： {{ liblecture.endTime }}</view>
           <view>讲座介绍： {{ liblecture.content }}</view>          
 </view>
 

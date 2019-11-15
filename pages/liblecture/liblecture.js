@@ -9,9 +9,9 @@ Page({
   data: {
     TabCur: 0,
     scrollLeft:0,
-    list: [{"name":"未开始",index:0},
-           {"name":"进行中",index:1},
-           {"name":"已结束",index:2}],
+    list: [{"name":"未开始",index:0, "title":"未开始"},
+           {"name":"进行中",index:1, "title":"进行中"},
+           {"name":"已结束",index:2, "title":"已签到"}],
     lecturelist: [],
     latitude: null,
     longitude: null
@@ -85,6 +85,12 @@ Page({
           url: 'https://www.neumark.top/liblecture/register',
           method: "POST",
           success: (res) => {
+            // console.log(res.data)
+            wx.showToast({
+            title: res.data,
+            icon: "none",
+            duration: 2000
+      }) 
             // console.log(res.data)
           }
      })
