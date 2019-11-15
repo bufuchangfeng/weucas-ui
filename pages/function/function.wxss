@@ -1,8 +1,18 @@
 /* pages/function/function.wxss */
+page{
+    background: #fff;
+}
+.functions_title{
+    font-size: 40rpx;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
 
 .function_list{
     width: 100%;
-    background: #fff;
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -10,6 +20,9 @@
 .function_list .functions_item{
     width: 90%;
     padding: 20rpx;
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1) ;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1) ;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,22 +37,29 @@
 
 }
 .functions_item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    position: relative;
+    height: 300rpx;
+    overflow: hidden;
+
 }
 .functions_text{
     width: 100%;
-
+    z-index: 1000;
+    color: #fff;
+    position: absolute;
+    top: 50%;
     text-align: center;
     font-weight: bolder;
     font-size: 35rpx;
 }
 .functions_item image{
-    width: 170rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
     background: #fff;
-    height: 170rpx;
-    -webkit-border-radius: 80%;
-    -moz-border-radius: 80%;
-    border-radius: 80%;
+
+
 }

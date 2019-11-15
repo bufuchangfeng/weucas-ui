@@ -7,7 +7,7 @@ Page({
    */
   data: {
       loginStatus:false,
-      emailStatus:true,
+      emailStatus:false,
   },
 
   
@@ -67,6 +67,7 @@ Page({
 
   },
   navigateToLogin: function(){
+      console.log('111')
     var ifbind = wx.getStorageSync("ifbind")
     if(ifbind == ""){
       wx.navigateTo({

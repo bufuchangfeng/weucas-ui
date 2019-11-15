@@ -5,8 +5,27 @@
   /*flex-direction: row;*/
   /*justify-content:center; *!*/
 /*}*/
-
-
+page{
+    background: #fff;
+}
+.functions_title{
+    font-size: 40rpx;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.dayTips {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    display: block;
+    margin: 20rpx auto;
+    margin-top: 20rpx;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
 .screen-swiper{
     width: 95%;
     -webkit-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.05) ;
@@ -29,4 +48,77 @@ swiper-item{
     -webkit-border-radius: 20rpx;
     -moz-border-radius: 20rpx;
     border-radius: 20rpx;
+}
+.usermotto {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    font-weight: bolder;
+    font-size: 45rpx;
+    margin-left: 5%;
+    text-align: center;
+    word-break: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.functions_title{
+    font-size: 40rpx;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.notice_box{
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.05) ;
+    -moz-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px 3px rgba(0,0,0,0.05) ;
+    width: 90%;
+    padding: 10rpx;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 5%;
+    color: #fff;
+    background: #6f89c5;
+    -webkit-border-radius: 15rpx;
+    -moz-border-radius: 15rpx;
+    border-radius: 15rpx;
+
+    white-space: nowrap;
+    word-break: keep-all;
+    margin-bottom: 20rpx;
+}
+.notice_text{
+
+    -webkit-animation-name: antMoveRightIn;
+    -moz-animation-name: antMoveRightIn;
+    -o-animation-name: antMoveRightIn;
+    animation-name: antMoveRightIn;
+    width: 100%;
+    animation-timing-function: linear;
+    margin-left: 90%;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 7500ms;
+    -moz-animation-duration: 7500ms;
+    -o-animation-duration: 7500ms;
+    -webkit-animation-delay: 1000ms;
+    -moz-animation-delay: 1000ms;
+    -o-animation-delay: 1000ms;
+    animation-delay: 1000ms;
+    animation-duration: 7500ms;
+}
+@keyframes antMoveRightIn {
+    0%{
+        margin-left: 90%；
+    }
+    /*50%{*/
+        /*margin-left: -105%;*/
+    /*}*/
+    100%{
+        margin-left: -105%;
+    }
+
 }

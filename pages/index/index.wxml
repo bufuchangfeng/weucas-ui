@@ -1,17 +1,21 @@
 <!--index.wxml-->
 
+<view class="usermotto">
+
+    <!--<image class="logo" mode="widthFix" src="../img/logo.png"></image>-->
+    <text class="tips" style="text-align:left">hello,{{helloText}}</text>
+
+</view>
 <swiper  class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
   <swiper-item wx:for="{{swiperList}}" wx:key>
     <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
     <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
   </swiper-item>
 </swiper>
-
+<image class="dayTips" mode="widthFix" src="https://v2.jinrishici.com/one.svg"></image>
 <view>
-    <view class="padding text-center">
-        <view class="padding-xl radius shadow-warp bg-white margin-top">
-            <view>果壳儿是一款国科大校园生活小程序。</view>
-            <view>欢迎使用和提建议！</view>
-        </view>
+    <view class="notice_box">
+            <view class="notice_text">{{noticeText}}</view>
     </view>
 </view>
+<view class="functions_title">推荐功能</view>

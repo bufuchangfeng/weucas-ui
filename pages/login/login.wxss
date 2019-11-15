@@ -1,1 +1,39 @@
 /* pages/login/login.wxss */
+page{
+    background: #6f89c5;
+
+}
+.account_box{
+    width: 90%;
+    margin-left: 5%;
+}
+.login_icon{
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1500ms;
+    -moz-animation-duration: 1500ms;
+    -o-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+}
+.login_btn::after{
+    border: none;
+}
+.login_btn{
+    background: #fff;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 30rpx
+
+}
+.footer{
+    position: fixed;
+    bottom: 20rpx;
+    margin-top: 30rpx;
+    width: 100%;
+    text-align: center;
+    opacity: .8;
+
+}

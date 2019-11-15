@@ -1,16 +1,30 @@
 /* pages/me/me.wxss */
 
 page{
-    background: #00c594;
-    
+
+    background: #fff;
 }
-
+.user_top{
+    height: 200rpx;
+    background: #626ec5;
+    -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
+    -moz-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1);
+}
 .user_box{
+    background: #fff;
+    width: 80%;
+    margin-left: 10%;
+    -webkit-border-radius: 20rpx;
+    -moz-border-radius: 20rpx;
+    border-radius: 20rpx;
+    margin-top: -150rpx;
+    padding: 50rpx 0 0;
+    -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
+    -moz-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1);
 
-    width: 100%;
-    margin: 0;
-    padding: 40rpx 0;
-    padding-bottom: 0;
+
 }
 .user_head image{
     width: 150rpx;
@@ -76,34 +90,27 @@ page{
     width: 90%;
     background: #fff;
     padding: 10rpx;
+    border-top: 1px solid rgba(0,0,0,0.1);
 
-    -webkit-border-radius: 10rpx;
-    -moz-border-radius: 10rpx;
-    border-radius: 10rpx;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin-left: 5%;
-    -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
-    -moz-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
-    box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1);
+
 }
 
 .footer{
-    position: fixed;
-    bottom: 20rpx;
+
+    margin-top: 30rpx;
     width: 100%;
     text-align: center;
     opacity: .8;
 
 }
-
-
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+.email_service{
+    margin-top: 20rpx;
+    padding-bottom: 10rpx;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
+

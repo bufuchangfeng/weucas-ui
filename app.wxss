@@ -6,3 +6,11 @@
 Page{
    background-color: #f8f8f8;
 }
+@keyframes fadeIn {
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+   }
+}

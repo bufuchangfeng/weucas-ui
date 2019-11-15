@@ -1,16 +1,14 @@
 <!--pages/me/me.wxml-->
-
+<view class="user_top"></view>
 <view class="user_box">
     <!--头像-->
     <view class="user_head"><image mode="widthFix" src="../../images/fake_user.png"></image></view>
     <!--用户名-->
   <view class="user_op_box">
-      <view class="user_nick"><text>{{loginStatus ? "您已登录":"hello，你还未登录！"}}</text><switch checked="{{loginStatus}}" bindchange="login"></switch></view>
-      <view hidden="{{!loginStatus}}" class="user_nick"><text>{{emailStatus ? "已开启人文邮件服务":"已关闭人文邮件服务"}}</text><switch checked="{{emailStatus}}" bindchange="emailsSwitch"></switch></view>
+      <view class="user_nick" ><text>{{loginStatus ? "您已登录":"hello，你还未登录！"}}</text><switch bindtap="navigateToLogin" style="color: #6f89c5!important" color="#6f89c5" checked="{{loginStatus}}" bindchange="login"></switch></view>
   </view>
-
 </view>
-
+<!--登录临时放到这里，按照你可以按照原有逻辑，使用switch来控制登录页面跳转-->
 
 
 
@@ -24,6 +22,8 @@
 
 <!--我的页面功能-->
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view hidden="{{!loginStatus}}" class="user_nick email_service"><text>{{emailStatus ? "已开启人文邮件服务":"已关闭人文邮件服务"}}</text><switch color="#6f89c5" checked="{{emailStatus}}" bindchange="emailsSwitch"></switch></view>
+
     <view class="cu-item arrow">
         <button class="cu-btn content" >
             <text class="cuIcon-writefill text-cyan"></text>

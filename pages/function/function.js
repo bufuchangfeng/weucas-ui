@@ -15,37 +15,25 @@ Page({
             color:"bg-red",
             name:"校车时间表",
             type:"schoolbus",
-            url:"../../images/icon_home_active.png"
+            url:"http://www.neumark.top:8080/ucas9.jpg"
         },
         {
             name:"校历",
             color:"bg-blue",
             type:"calendar",
-            url:"../../images/icon_home_active.png"
+            url:"http://www.neumark.top:8080/ucas8.jpg"
         },
         {
             name:"图书馆",
             color:"bg-orange",
             type:"library",
-            url:"../../images/icon_home_active.png"
+            url:"http://www.neumark.top:8080/ucas7.jpg"
         },
         {
             name:"成绩查询",
             color:"bg-green",
             type:"score",
-            url:"../../images/icon_home_active.png"
-        },
-        {
-            name:"··更多",
-            type:99,
-            color:"bg-gray",
-            url:"../../images/icon_home_active.png"
-        },
-        {
-            name:"··更多",
-            type:99,
-            color:"bg-gray",
-            url:"../../images/icon_home_active.png"
+            url:"http://www.neumark.top:8080/ucas10.jpg"
         }
     ]
   },

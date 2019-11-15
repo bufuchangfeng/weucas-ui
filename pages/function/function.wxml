@@ -1,16 +1,9 @@
 <!--pages/function/function.wxml-->
-<view class="cu-bar bg-white solid-bottom">
-    <view class="action">
-        <text class="cuIcon-title text-orange "></text> 常用功能
-    </view>
-    <view class="action">
-        ··期待更多
-    </view>
-</view>
+<view class="functions_title">常用功能</view>
 
 <view class="function_list">
     <block wx:for="{{functions}}" wx:key>
-        <view class="shadow shadow-blur functions_item {{item.color}}" data-type = "{{item.type}}" bindtap="Router" >
+        <view class="shadow shadow-blur functions_item " data-type = "{{item.type}}" bindtap="Router" >
             <image mode="widthFix" src="{{item.url}}"></image>
             <view class="functions_text">{{item.name}}</view>
         </view>
