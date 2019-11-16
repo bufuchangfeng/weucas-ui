@@ -26,11 +26,12 @@ page{
 
 
 }
-.user_head image{
+.user_head {
     width: 150rpx;
     background: #fff;
     display: block;
     margin: 0 auto;
+    overflow: hidden;
     height: 150rpx;
     -webkit-border-radius: 70%;
     -moz-border-radius: 70%;
@@ -38,9 +39,35 @@ page{
 
 
 }
-.user_head{
-    padding-bottom: 40rpx;
+.user_head open-data{
+    width: 150rpx;
+    height: 150rpx;
+    mso-border-right-alt: 80%;
 }
+.user_nick open-data{
+    padding: 5rpx 10rpx;
+    /*background: #6f89c5;*/
+    /*text-align: center;*/
+    /*color:#fff;*/
+    /*-webkit-border-radius: 20rpx;*/
+    /*-moz-border-radius: 20rpx;*/
+    /*border-radius: 20rpx;*/
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.user_nick text{
+    width: 100%;
+   
+}
+
 .user_op_box:first-child{
     margin-top: 15rpx;
 }

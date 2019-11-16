@@ -1,4 +1,6 @@
 // pages/me/me.js
+// import {showToast} from "./index";
+
 var util = require("../../utils/util.js")
 Page({
 
@@ -6,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      loginStatus:false,
+      loginStatus:wx.getStorageSync('ifbind'),
       emailStatus:false,
   },
 
@@ -29,7 +31,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+        loginStatus:qq.getStorageSync('ifbind')
+    })
   },
 
   /**
@@ -67,9 +71,21 @@ Page({
 
   },
   navigateToLogin: function(){
-      console.log('111')
-    var ifbind = wx.getStorageSync("ifbind")
-    if(ifbind == ""){
+      console.log(this.data.loginStatus)
+      if(!this.data.loginStatus){
+          qq.setStorageSync('ifbind','')
+          qq.showToast({
+              title:"已退出！"
+          });
+          this.setData({
+              loginStatus:""
+          })
+          return
+      }
+
+    var ifbind = wx.getStorageSync("ifbind");
+
+    if(ifbind === ""){
       wx.navigateTo({
       url: '/pages/login/login',
     })
