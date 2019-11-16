@@ -1,6 +1,7 @@
 <!--pages/librarylogin/librarylogin.wxml-->
-<view style="padding-top:240rpx;">
-  <view>
+<image mode="widthFix" class="login_icon" src="../../images/library.png"></image>
+<view >
+  <view class="account_box">
     <van-cell-group style="padding-top: 20rpx;">
     <van-field
       value = "{{ stuid }}"
@@ -20,8 +21,10 @@
     bind:change = "passwordinput"
   />
     </van-cell-group>
-    <view style="display: flex; flex-direction: row; justify-content:center;">
-      <van-button type="info" plain style="padding-top: 20rpx; padding-bottom: 20rpx; height: 30rpx;" bindtap="login">绑定图书馆账号</van-button>
-    </view>
+    <!--<view style="display: flex; flex-direction: row; justify-content:center;">-->
+      <!--<van-button type="info" plain style="padding-top: 20rpx; padding-bottom: 20rpx; height: 30rpx;" bindtap="login">绑定图书馆账号</van-button>-->
+    <!--</view>-->
   </view>
 </view>
+<button class="login_btn" bindtap="login" bindtap="login">绑定图书馆账号</button>
+<view class="footer"><text>果壳小组2019@v1.0.0</text></view>

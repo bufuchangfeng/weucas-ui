@@ -1,6 +1,6 @@
 /* pages/login/login.wxss */
 page{
-    background: #6f89c5;
+    background: #fff;
 
 }
 .account_box{
@@ -22,8 +22,15 @@ page{
     border: none;
 }
 .login_btn{
-    background: #fff;
+    background: #6f89c5;
+    color: #fff;
     width: 50%;
+    -webkit-box-shadow: 0 1px 3px 3px rgba(111, 137, 197, 0.26);
+    -moz-box-shadow: 0 1px 3px 3px rgba(111, 137, 197, 0.26) ;
+    box-shadow: 0 1px 3px 3px rgba(111, 137, 197, 0.26) ;
+    -webkit-border-radius: 405rpx;
+    -moz-border-radius: 405rpx;
+    border-radius: 405rpx;
     margin-left: 25%;
     margin-top: 30rpx
 

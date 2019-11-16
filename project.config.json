@@ -58,7 +58,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
@@ -85,6 +85,20 @@
 					"id": -1,
 					"name": "login",
 					"pathName": "pages/login/login",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": 4,
+					"name": "librarylogin",
+					"pathName": "pages/librarylogin/librarylogin",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "library",
+					"pathName": "pages/library/library",
 					"query": "",
 					"scene": ""
 				}

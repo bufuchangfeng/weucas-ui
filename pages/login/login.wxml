@@ -27,5 +27,5 @@
   </view>
 </view>
 
-<button class="login_btn" bindtap="login">绑定邮箱</button>
+<button class="login_btn " bindtap="login">绑定邮箱</button>
 <view class="footer"><text>果壳小组2019@v1.0.0</text></view>
