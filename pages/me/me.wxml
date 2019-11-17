@@ -15,9 +15,9 @@
     <view hidden="{{!loginStatus}}" class="user_nick email_service"><text>{{emailStatus ? "已开启人文邮件服务":"已关闭人文邮件服务"}}</text><switch color="#6f89c5" checked="{{emailStatus}}" bindchange="emailsSwitch"></switch></view>
 
     <view class="cu-item arrow">
-        <button class="cu-btn content" >
+        <button class="cu-btn content" bindtap="navigateToLecture">
             <text class="cuIcon-writefill text-cyan"></text>
-            <text class="text-grey">功能1</text>
+            <text class="text-grey">教育素质签到</text>
         </button>
     </view>
     <view class="cu-item arrow">

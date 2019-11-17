@@ -6,7 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    booklist: []
+    booklist: [{
+        book_name:"001",
+        book_year:"2019-12-11",
+        book_time:"2019-12-20",
+        book_author:"test"
+    },
+        {
+            book_name:"001",
+            book_year:"2019-12-11",
+            book_time:"2019-12-20",
+            book_author:"test"
+        }]
   },
 
   /**
@@ -42,7 +53,7 @@ Page({
   },
 
   onLoad: function (options) {
-    this.getBooks()
+    // this.getBooks()
   },
 
   /**
@@ -56,7 +67,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   this.getBooks()
+   // this.getBooks()
   },
 
   /**
@@ -94,21 +105,7 @@ Page({
 
   },
 
-  navigateToLecture: function(){
-    var ifbind = wx.getStorageSync("ifbindlibrary")
-    if(ifbind == ""){
-        wx.showToast({
-        title: '请先登录！',
-        icon: "none",
-        duration: 2000
-      }) 
-    }
-    else{
-      wx.navigateTo({
-      url: '/pages/liblecture/liblecture',
-    })
-    }
-  },
+
 
   navigateToLogin: function(){
     var ifbind = wx.getStorageSync("ifbindlibrary")

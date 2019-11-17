@@ -161,6 +161,22 @@ Page({
       this.setData({
           emailStatus:!this.data.emailStatus
       })
-    }
+    },
+    //教育素质签到
+    navigateToLecture: function(){
+        var ifbind = wx.getStorageSync("ifbindlibrary")
+        if(ifbind == ""){
+            wx.showToast({
+                title: '请先登录！',
+                icon: "none",
+                duration: 2000
+            })
+        }
+        else{
+            wx.navigateTo({
+                url: '/pages/liblecture/liblecture',
+            })
+        }
+    },
   
 })
