@@ -1,6 +1,6 @@
 <scroll-view scroll-x class="bg-white nav">
   <view class="flex text-center">
-    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:key wx:for="{{list}}" bindtap="tabSelect" data-id="{{index}}">
+    <view class="cu-item flex-sub {{index==TabCur?'text-index cur':''}}" wx:key wx:for="{{list}}" bindtap="tabSelect" data-id="{{index}}">
       {{item.title}}
     </view>
   </view>
@@ -10,7 +10,7 @@
 <scroll-view scroll-y="true" class="scroll">
   <view wx:for="{{lecturelist}}" wx:key>
       <view class="padding">
-        <view class="padding-xl radius shadow-warp bg-white margin-top" bindtap="showCardView" data-index="{{index}}">
+        <view class="padding-xl radius shadow bg-white margin-top" bindtap="showCardView" data-index="{{index}}">
           <view>讲座名称： {{item.name}}</view>
           <view>讲座地点： {{item.place}}</view>
           <view>主讲人:  {{item.who}}</view>

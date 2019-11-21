@@ -1,11 +1,13 @@
 // pages/curriculum/curriculum.js
-var util = require("../../utils/util.js")
+var util = require("../../utils/util.js");
+let tips = null;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    selectClassInfo:null,
     colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#0A9A84", "#61BC69", "#12AEF3", "#E29AAD"],
     wlist: [],
     months: [],
@@ -98,11 +100,27 @@ Page({
   },
 
   showCardView: function(e){
-    console.log(e.currentTarget.dataset.index)
-    wx.navigateTo({
-      url: "/pages/lessoninfo/lessoninfo?lesson=" + JSON.stringify(this.data.wlist[e.currentTarget.dataset.index])
-    })
+    console.log(e.currentTarget.dataset.index);
+      var _time = [];
+      let lesson = this.data.wlist[e.currentTarget.dataset.index];
+      for(var i = 0; i < lesson['time'].length; i++){
+          var _t = {};
+          _t['time'] = lesson['time'][i]['上课时间'];
+          _t['week'] = lesson['time'][i]['上课周次'];
+          _t['place'] = lesson['time'][i]['上课地点'];
+          _time.push(_t);
+      }
+
+      this.setData({
+          selectClassInfo:true,
+          time: _time
+      });
   },
+    close_classInfo(e){
+    this.setData({
+        selectClassInfo:false
+    })
+    },
 
   /**
    * 生命周期函数--监听页面加载
@@ -122,10 +140,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onLoad: function () {
-    
-    this.timeInit()
+    tips = wx.showLoading({
+        title:"加载中.."
+    });
+    this.timeInit();
 
-    var that = this
+    var that = this;
 
     var ifbind = wx.getStorageSync("ifbind")
     if(ifbind == ""){
@@ -169,6 +189,8 @@ Page({
 
             that.setData({
               wlist: _wlist
+            },()=>{
+              wx.hideLoading(tips)
             })
           }
        })

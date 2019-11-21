@@ -1,4 +1,7 @@
 /* pages/curriculum/curriculum.wxss */
+page{
+  background: #fff;
+}
 .flex-item {
   width: 95rpx;
   height: 100px;
@@ -70,4 +73,74 @@
 .pre_box image,.next_box image{
   width: 50rpx;
   height: 50rpx;
+}
+.class_info_box{
+  z-index: 9999!important;
+  position: fixed;
+  width: 100%;
+  border-radius: 10rpx 10rpx 0 0;
+  -webkit-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1) ;
+  left: 0;
+
+  -webkit-animation-name: toTop;
+  -moz-animation-name: toTop;
+  -o-animation-name: toTop;
+  animation-name: toTop;
+  background: #fff;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+.close_btn{
+ 
+  -webkit-animation-name: scale;
+
+  animation-fill-mode: forwards;
+
+  -moz-animation-name: scale;
+  -o-animation-name: scale;
+  animation-name: scale;
+  position: absolute;
+  right: 5%;
+  -webkit-animation-duration:2000ms;
+  -moz-animation-duration: 2000ms;
+  -o-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+
+
+}
+@keyframes scale {
+  from{
+    -webkit-transform: rotate(0);
+    -moz-transform:  rotate(0);
+    -ms-transform:  rotate(0);
+    -o-transform:  rotate(0);
+    transform:  rotate(0);
+  }
+  to{
+    -webkit-transform: rotate(404deg) scale(1.7);
+    -moz-transform: rotate(404deg) scale(1.7);
+    -ms-transform: rotate(404deg) scale(1.7);
+    -o-transform: rotate(404deg) scale(1.7);
+    transform: rotate(404deg) scale(1.7);
+  }
+}
+@keyframes toTop {
+  from{
+    bottom: -100%
+  }
+  to{
+    bottom: 0;
+  }
+}
+.class_item{
+  width: 90%;
+  margin-left: 5%;
+
 }

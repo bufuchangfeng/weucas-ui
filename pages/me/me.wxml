@@ -14,24 +14,14 @@
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view hidden="{{!loginStatus}}" class="user_nick email_service"><text>{{emailStatus ? "已开启人文邮件服务":"已关闭人文邮件服务"}}</text><switch color="#6f89c5" checked="{{emailStatus}}" bindchange="emailsSwitch"></switch></view>
 
-    <view class="cu-item arrow">
-        <button class="cu-btn content" bindtap="navigateToLecture">
-            <text class="cuIcon-writefill text-cyan"></text>
-            <text class="text-grey">教育素质签到</text>
-        </button>
-    </view>
+   
     <view class="cu-item arrow">
         <button class="cu-btn content" >
             <text class="cuIcon-writefill text-cyan"></text>
-            <text class="text-grey">功能2</text>
+            <text class="text-grey">联系我们</text>
         </button>
     </view>
-    <view class="cu-item arrow">
-        <button class="cu-btn content" >
-            <text class="cuIcon-writefill text-cyan"></text>
-            <text class="text-grey">功能2</text>
-        </button>
-    </view>
+
     <view class="cu-item arrow">
         <button class="cu-btn content" bindtap="navigateToAdvice">
             <text class="cuIcon-writefill text-cyan"></text>

@@ -2,13 +2,7 @@
 page{
     background: #fff;
 }
-.functions_title{
-    font-size: 40rpx;
-    font-weight: bolder;
-    margin-left: 5%;
-    margin-top: 20rpx;
-    margin-bottom: 20rpx;
-}
+
 
 .function_list{
     width: 100%;

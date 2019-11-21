@@ -35,3 +35,20 @@
     </view>
   </view>
 </scroll-view>
+<view class="class_info_box" hidden="{{!selectClassInfo}}">
+  <view class="class_info">
+    <view class="close_btn" bindtap="close_classInfo">+</view>
+    <view wx:for="{{time}}" class="class_item">
+
+        <view class="class_item padding-xl radius shadow bg-index text-white margin-top">
+          <view>上课时间： {{item.time}}</view>
+          <view>上课周次： {{item.week}}</view>
+          <view>上课地点： {{item.place}}</view>
+        </view>
+
+    </view>
+
+  </view>
+
+
+</view>

@@ -1,5 +1,6 @@
 // pages/score/score.js
-var util = require("../../utils/util.js")
+var util = require("../../utils/util.js");
+let tips= null;
 
 Page({
 
@@ -78,7 +79,9 @@ Page({
       }) 
       return
     }
-
+      tips = wx.showLoading({
+          title:"加载中.."
+      })
      var that = this
      wx.request({
           data: util.json2Form({
@@ -93,6 +96,8 @@ Page({
             // console.log(res.data)
             that.setData({
               scores: res.data
+            },()=>{
+                wx.hideLoading(tips)
             })
       }
     })

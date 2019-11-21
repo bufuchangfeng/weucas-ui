@@ -1,7 +1,7 @@
 <!--pages/score/score.wxml-->
-
+<view class="functions_title">我的成绩</view>
 <view class="padding">
-  <view class="padding-xl radius shadow-warp bg-white margin-top">
+  <view class="padding-xl radius shadow shadow-blur bg-index text-white user_info">
         <view>{{scores.stu_info.stu_name}}</view>
         <view>{{scores.stu_info.stu_no}}</view>
         <view>{{scores.stu_info.stu_major}}</view>
@@ -12,12 +12,12 @@
 <scroll-view scroll-y="true" class="scroll">
   <view wx:for="{{scores.score}}" wx:key>
   <view class="padding">
-  <view class="padding-xl radius shadow-warp bg-white margin-top">
-        <view>课程名称：{{item.course_name}}</view>
-        <view>课程英文名称：{{item.course_name_en}}</view>
-        <view>课程学分：{{item.course_credit}}</view>
-        <view>课程状态：{{item.course_status}}</view>
-        <view>课程学期：{{item.course_term}}</view>
+  <view class="padding-xl radius shadow shadow-blur bg-green class_item">
+        <view class="truncate">课程名称：{{item.course_name}}</view>
+        <view class="truncate">课程英文名称：{{item.course_name_en}}</view>
+        <view class="truncate">课程学分：{{item.course_credit}}</view>
+        <view class="truncate">课程状态：{{item.course_status}}</view>
+        <view class="truncate">课程学期：{{item.course_term}}</view>
         <view>课程分数：{{item.course_score}}</view>
         <view>是否为学位课：{{item.course_xuewei}}</view>
   </view>

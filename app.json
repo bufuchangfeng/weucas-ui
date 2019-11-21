@@ -10,7 +10,6 @@
     "pages/calendar/calendar",
     "pages/library/library",
     "pages/librarylogin/librarylogin",
-    "pages/lessoninfo/lessoninfo",
     "pages/liblecture/liblecture",
     "pages/score/score",
     "pages/liblectureinfo/liblectureinfo"

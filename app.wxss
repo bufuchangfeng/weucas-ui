@@ -14,3 +14,23 @@ Page{
       opacity: 1;
    }
 }
+.text-index{
+   color: #6f89c5;
+}
+.bg-index{
+   background: #6f89c5;
+}
+.functions_title{
+   font-size: 50rpx;
+   font-weight: bolder;
+   margin-left: 5%;
+   margin-top: 20rpx;
+   margin-bottom: 20rpx;
+}
+.truncate{
+   text-wrap: normal;
+   white-space: nowrap;
+   -ms-text-overflow: ellipsis;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}

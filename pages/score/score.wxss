@@ -3,3 +3,12 @@
   height: 3000px;
   z-index: 101;
 }
+page{
+  background: #fff;
+}
+.class_item view{
+  margin-top: 10rpx;
+}
+.user_info view{
+  margin-top: 10rpx;
+}

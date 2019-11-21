@@ -1,26 +1,70 @@
 /* pages/library/library.wxss */
-.scroll {
-  height: 3000px;
-  z-index: 101;
+page{
+    background: #fff;
 }
 
-.fixed_box{
-  padding: 15rpx;
-  -webkit-border-radius: 20rpx;
-  -moz-border-radius: 20rpx;
-  border-radius: 20rpx;
-  display: flex;
-  position: fixed;
-  z-index: 99999!important;
-  right: 5%;
-  color:#fff;
-  bottom: 15%;
-  -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
-  -moz-box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1);
-  box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1) ;
-  background: #6f89c5;
+.quit_btn {
+    margin-left: 20 rpx;
+    margin-right: 20 rpx;
 }
-.quit_btn{
-  margin-left: 20rpx;
-  margin-right: 20rpx;
+
+.library_header {
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.functions_title{
+    font-size: 50rpx;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 20 rpx;
+    margin-bottom: 20 rpx;
+}
+
+.library_left {
+    display: flex;
+
+    margin-left: 5%;
+
+}
+.books_item_box{
+    display: flex;
+    width: 100%;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    flex-wrap: wrap;
+}
+.books_item {
+    width: 300rpx;
+    margin-top: 50rpx;
+    margin-right: 50rpx;
+    background: #6f89c5;
+    color: #fff;
+    -webkit-border-radius: 10rpx;
+    -moz-border-radius: 10rpx;
+    border-radius: 10rpx;
+    -webkit-box-shadow: 0 1px 3px 4px rgba(0,0,0,0.05) ;
+    -moz-box-shadow: 0 1px 3px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px 4px rgba(0,0,0,0.05) ;
+}
+.books_info{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10rpx;
+
+}
+.books_name{
+
+    word-break: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.books_info view{
+    margin-top: 10rpx;
 }

@@ -7,11 +7,17 @@ Page({
    */
   data: {
     booklist: [{
-        book_name:"001",
+        book_name:"0011212121212121",
         book_year:"2019-12-11",
         book_time:"2019-12-20",
         book_author:"test"
     },
+        {
+            book_name:"001",
+            book_year:"2019-12-11",
+            book_time:"2019-12-20",
+            book_author:"test"
+        },
         {
             book_name:"001",
             book_year:"2019-12-11",
@@ -35,12 +41,12 @@ Page({
     }
     var that = this
      wx.request({
-          data: util.json2Form({
-            openid: openid,
-          }),
-          header: {
-            "Content-Type": "application/x-www-form-urlencoded"
+          data: {
+            openid,
           },
+          // header: {
+          //   "Content-Type": "application/x-www-form-urlencoded"
+          // },
           url: 'https://www.neumark.top/library-user/query_borrowed_books',
           method: "POST",
           success: (res) => {
@@ -174,6 +180,22 @@ Page({
           }
      })
     }
-  }
+  },
+   //教育素质签到
+    navigateToLecture: function(){
+        var ifbind = wx.getStorageSync("ifbindlibrary")
+        if(ifbind == ""){
+            wx.showToast({
+                title: '请先登录！',
+                icon: "none",
+                duration: 2000
+            })
+        }
+        else{
+            wx.navigateTo({
+                url: '/pages/liblecture/liblecture',
+            })
+        }
+    },
 
 })

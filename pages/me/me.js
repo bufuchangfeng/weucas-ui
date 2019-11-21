@@ -158,25 +158,76 @@ Page({
       })
     },
     emailsSwitch(){
+      if(this.data.emailStatus){
+          this.openLecture()
+      }else{
+          this.closeLecture()
+      }
       this.setData({
           emailStatus:!this.data.emailStatus
       })
     },
-    //教育素质签到
-    navigateToLecture: function(){
-        var ifbind = wx.getStorageSync("ifbindlibrary")
+    openLecture:function(){
+        var ifbind = wx.getStorageSync("ifbind")
         if(ifbind == ""){
             wx.showToast({
-                title: '请先登录！',
+                title: '未登录！',
                 icon: "none",
                 duration: 2000
             })
+            return;
         }
-        else{
-            wx.navigateTo({
-                url: '/pages/liblecture/liblecture',
-            })
-        }
+        var openid = wx.getStorageSync("openid")
+        wx.request({
+            data: util.json2Form({
+                openid: openid,
+                state: "1"
+            }),
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            url: 'https://www.neumark.top/user/update_lecture_state',
+            method: "POST",
+            success: (res) => {
+                wx.showToast({
+                    title: '开启人文邮件通知服务！',
+                    icon: "none",
+                    duration: 2000
+                })
+            }
+        })
     },
-  
+    closeLecture:function(){
+        var ifbind = wx.getStorageSync("ifbind")
+        if(ifbind == ""){
+            wx.showToast({
+                title: '未登录！',
+                icon: "none",
+                duration: 2000
+            })
+            return;
+        }
+        var openid = wx.getStorageSync("openid")
+        wx.request({
+            data: util.json2Form({
+                openid: openid,
+                state: "0"
+            }),
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            url: 'https://www.neumark.top/user/update_lecture_state',
+            method: "POST",
+            success: (res) => {
+                wx.showToast({
+                    title: '关闭人文邮件通知服务！',
+                    icon: "none",
+                    duration: 2000
+                })
+            }
+        })
+
+    },
+
+
 })

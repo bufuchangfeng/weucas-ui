@@ -38,67 +38,6 @@ Page({
     ]
   },
 
-  openLecture:function(){
-    var ifbind = wx.getStorageSync("ifbind")
-    if(ifbind == ""){
-      wx.showToast({
-        title: '未登录！',
-        icon: "none",
-        duration: 2000
-      })
-      return;
-    }
-    var openid = wx.getStorageSync("openid")
-    wx.request({
-          data: util.json2Form({
-            openid: openid,
-            state: "1"
-          }),
-          header: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
-          url: 'https://www.neumark.top/user/update_lecture_state',
-          method: "POST",
-          success: (res) => {
-             wx.showToast({
-        title: '开启人文邮件通知服务！',
-        icon: "none",
-        duration: 2000
-        })
-      }
-    })
-  },
-  closeLecture:function(){
-     var ifbind = wx.getStorageSync("ifbind")
-    if(ifbind == ""){
-      wx.showToast({
-        title: '未登录！',
-        icon: "none",
-        duration: 2000
-      })
-      return;
-    }
-    var openid = wx.getStorageSync("openid")
-       wx.request({
-          data: util.json2Form({
-            openid: openid,
-            state: "0"
-          }),
-          header: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
-          url: 'https://www.neumark.top/user/update_lecture_state',
-          method: "POST",
-          success: (res) => {
-             wx.showToast({
-        title: '关闭人文邮件通知服务！',
-        icon: "none",
-        duration: 2000
-        })
-      }
-    })
-    
-  },
 
 
   /**
@@ -191,6 +130,17 @@ Page({
               title:"敬请期待！"
           });
           return
+      }
+      if(type === 'library'){
+        if(wx.getStorageSync('ifbindlibrary') !== 'yes'){
+          wx.showToast({
+            title:"未登录"
+          });
+          wx.navigateTo({
+             url:`/pages/librarylogin/librarylogin`
+          })
+          return
+        }
       }
       wx.navigateTo({
           url:`/pages/${type}/${type}`
